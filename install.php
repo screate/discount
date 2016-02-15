@@ -1,9 +1,9 @@
-<?
+ï»¿<?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php");
 CModule::IncludeModule('iblock');
 CModule::IncludeModule('highloadblock');
 
-// Êàòàëîã òîâàðîâ
+// ÐšÐ°Ñ‚Ð°Ð»Ð¾Ð³ Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð²
 define('CATALOG_IB', 2);
 
 use Bitrix\Highloadblock as HL;
@@ -17,7 +17,7 @@ $hlblock = HL\HighloadBlockTable::getList($filter)->fetch();
 if (!empty($hlblock))
 {
 	$hlblockID = $hlblock['ID'];
-	ShowNote('HighloadBlock óæå ñîçäàí!');
+	ShowNote('HighloadBlock ÑƒÐ¶Ðµ ÑÐ¾Ð·Ð´Ð°Ð½!');
 }
 else
 {
@@ -30,7 +30,7 @@ else
 	$result = HL\HighloadBlockTable::add($data);
 	$hlblockID = $result->getId();
 	
-	ShowNote('HighloadBlock ñîçäàí!');
+	ShowNote('HighloadBlock ÑÐ¾Ð·Ð´Ð°Ð½!');
 	
 	$obUserField  = new CUserTypeEntity();
 	
@@ -50,15 +50,15 @@ else
 				"DAFAULT_VALUE" => Array ()
 			),
 			"EDIT_FORM_LABEL" => array(
-				"ru" => "Ïîëüçîâàòåëü",
+				"ru" => "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ",
 				"en" => "User",
 			),
 			"LIST_COLUMN_LABEL" => array(
-				"ru" => "Ïîëüçîâàòåëü",
+				"ru" => "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ",
 				"en" => "User",
 			),
 			"LIST_FILTER_LABEL" => array(
-				"ru" => "Ïîëüçîâàòåëü",
+				"ru" => "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ",
 				"en" => "User",
 			),
 			"ERROR_MESSAGE" => array(
@@ -96,15 +96,15 @@ else
 				"DAFAULT_VALUE" => Array ()
 	),
 			"EDIT_FORM_LABEL" => array(
-				"ru" => "Ñêèäêà, %",
+				"ru" => "Ð¡ÐºÐ¸Ð´ÐºÐ°, %",
 				"en" => "Discount, %",
 	),
 			"LIST_COLUMN_LABEL" => array(
-				"ru" => "Ñêèäêà, %",
+				"ru" => "Ð¡ÐºÐ¸Ð´ÐºÐ°, %",
 				"en" => "Discount, %",
 	),
 			"LIST_FILTER_LABEL" => array(
-				"ru" => "Ñêèäêà, %",
+				"ru" => "Ð¡ÐºÐ¸Ð´ÐºÐ°, %",
 				"en" => "Discount, %",
 	),
 			"ERROR_MESSAGE" => array(
@@ -126,19 +126,19 @@ else
 		ShowError($ex->messages[0]["text"]);
 	}	
 	
-	ShowNote('Ïîëÿ HighloadBlock ñîçäàíû!');
+	ShowNote('ÐŸÐ¾Ð»Ñ HighloadBlock ÑÐ¾Ð·Ð´Ð°Ð½Ñ‹!');
 }
 if(defined('CATALOG_IB') && CATALOG_IB > 0)
 {
 	$properties = CIBlockProperty::GetList(Array(), Array("IBLOCK_ID"=>CATALOG_IB, 'CODE' => "DISCOUNT"));
 	if ($prop_fields = $properties->GetNext())
 	{
-		ShowNote('Ñâîéñòâî èíôîáëîêà "Ñêèäêà, %" óæå ñîçäàíî!');
+		ShowNote('Ð¡Ð²Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¸Ð½Ñ„Ð¾Ð±Ð»Ð¾ÐºÐ° "Ð¡ÐºÐ¸Ð´ÐºÐ°, %" ÑƒÐ¶Ðµ ÑÐ¾Ð·Ð´Ð°Ð½Ð¾!');
 	}
 	else
 	{
 		$arFields = Array(
-	        "NAME" => "Ñêèäêà, %",
+	        "NAME" => "Ð¡ÐºÐ¸Ð´ÐºÐ°, %",
 	        "ACTIVE" => "Y",
 	        "SORT" => "500",
 	        "CODE" => "DISCOUNT",

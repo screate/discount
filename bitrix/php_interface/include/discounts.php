@@ -1,4 +1,4 @@
-<?
+ï»¿<?
 use Bitrix\Main;
 use Bitrix\Main\Entity;
 
@@ -123,7 +123,7 @@ function __recalcSaleDiscount($user_id)
 		{
 			$arDiscountFields = array(
 				"LID" => 's1',
-				"NAME" => 'Ñêèäêà ïîëüçîâàòåëÿì - '.$UserPrc.'%',
+				"NAME" => 'Ð¡ÐºÐ¸Ð´ÐºÐ° Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑÐ¼ - '.$UserPrc.'%',
 				"ACTIVE_FROM" => '',
 				"ACTIVE_TO" => '',
 				"ACTIVE" => 'Y',
@@ -215,7 +215,7 @@ function __OnElementDiscount($arFields)
 			    'ACTIVE' => 'Y',
 			    'RENEWAL' => 'N',
 			    'XML_ID' => 'IB_PROPERTY_'.$ProductPrc,
-			    'NAME' => 'Ñêèäêà ïî ñâîéñòâó - '.$ProductPrc.'%',
+			    'NAME' => 'Ð¡ÐºÐ¸Ð´ÐºÐ° Ð¿Ð¾ ÑÐ²Ð¾Ð¹ÑÑ‚Ð²Ñƒ - '.$ProductPrc.'%',
 			    'SORT' => 100,
 			    'VALUE_TYPE' => 'P',
 			    'VALUE' => $ProductPrc,

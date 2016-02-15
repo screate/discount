@@ -1,4 +1,4 @@
-<?
+ï»¿<?
 /*
  * USER ID SALE CONDITION
  * */
@@ -16,7 +16,7 @@ class CSaleCondCtrlUserFields extends CSaleCondCtrlComplex
 		$arResult = array(
 			'controlgroup' => true,
 			'group' =>  false,
-			'label' => 'Ïîëüçîâàòåëüñêèå',
+			'label' => 'ĞŸĞ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»ÑŒÑĞºĞ¸Ğµ',
 			'showIn' => static::GetShowIn($arParams['SHOW_IN_GROUPS']),
 			'children' => array()
 		);
@@ -125,8 +125,8 @@ class CSaleCondCtrlUserFields extends CSaleCondCtrlComplex
 				'FIELD_TYPE' => 'int',
 				'MULTIPLE' => 'N',
 				'GROUP' => 'N',
-				'LABEL' => 'ID ïîëüçîâàòåëÿ',
-				'PREFIX' => 'ID ïîëüçîâàòåëÿ',
+				'LABEL' => 'ID Ğ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»Ñ',
+				'PREFIX' => 'ID Ğ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»Ñ',
 				'LOGIC' => static::GetLogic(array(BT_COND_LOGIC_EQ, BT_COND_LOGIC_NOT_EQ)),
 				'JS_VALUE' => array(
 					'type' => 'input',
